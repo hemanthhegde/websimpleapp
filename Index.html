@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Source Viewer</title>
+</head>
+<body>
+    <div style="width:auto;">
+        <select name="tags" data-bind="options: sourceTags, optionsText: getSourceTagsText, value: selectedSourceTag">
+        </select>
+    </div>
+    <div style="width:auto;">
+        
+    </div>
+        <div class="col-md-9">
+
+            <h1>HTML Source Viewer</h1>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="start" action="source.action.js" name="start">
+                        <h4>Enter Website URL:</h4>
+                        <div class="input-group"><span class="input-group-addon">http://</span><input placeholder="www.domain.com" class="form-control" id="website_name" type="text" name="website_name"></div>
+                        <p>
+                            <input type="hidden" name="page_token" value="get_website">
+                            <input type="submit" class="btn btn-primary" name="submit" value="View Source">
+                        </p>
+                        <p>
+                            <img id="loader" src="../../images/loader.gif">
+                            <div id="error"></div>
+                        </p>
+                    </form>
+                    <div id="viewsource"></div>
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>
